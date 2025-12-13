@@ -24,12 +24,10 @@ const Header = () => {
     <header className="sticky top-0 z-40 bg-surface-50/90 backdrop-blur-m3 px-6 py-4 border-b border-surface-200/50">
       <div className="container-custom">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <a href="/" className="flex items-center">
             <img src="/logo.png" alt="AOIN" className="h-10 w-auto" />
           </a>
 
-          {/* Desktop navigation */}
           <div className="hidden md:flex gap-2">
             {CATEGORIES.map((category) => (
               <Chip
@@ -41,7 +39,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Action buttons */}
           <div className="flex items-center gap-2">
             <IconButton icon={Search} aria-label="Search" />
             <IconButton
@@ -50,8 +47,6 @@ const Header = () => {
               aria-label="Shopping Cart"
             />
             <IconButton icon={User} isFilled aria-label="User Account" />
-
-            {/* Mobile menu toggle */}
             <button
               onClick={handleMobileMenuToggle}
               className="md:hidden icon-btn icon-btn-standard"
@@ -62,7 +57,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-2 animate-in slide-in-from-top">
             {CATEGORIES.map((category) => (

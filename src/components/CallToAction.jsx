@@ -8,10 +8,8 @@ const CallToAction = () => {
     <>
       <section className="container-custom py-16 md:py-24">
         <div className="bg-primary-900 rounded-m3-lg p-8 md:p-16 text-primary-50 relative overflow-hidden">
-          {/* Background shapes */}
           <BackgroundBlob position="top-right" size="lg" color="primary" />
           <BackgroundBlob position="bottom-left" size="md" color="secondary" />
-
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 mb-6 bg-primary-400/20 px-4 py-2 rounded-full backdrop-blur-sm">
               <span className="w-2 h-2 bg-primary-300 rounded-full animate-pulse" />
@@ -40,8 +38,6 @@ const CallToAction = () => {
                 Become a Merchant
               </button>
             </div>
-
-            {/* Stats section */}
             <div className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-primary-700/50">
               {STATS.map((stat) => (
                 <StatCard
@@ -55,8 +51,6 @@ const CallToAction = () => {
           </div>
         </div>
       </section>
-
-      {/* Floating action button */}
       <button
         className="fixed bottom-6 right-6 fab shadow-m3-lg z-50"
         aria-label="Shopping Cart"

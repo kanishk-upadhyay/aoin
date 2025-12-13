@@ -1,45 +1,76 @@
 # AOIN – Live Commerce Marketplace
 
-A modern live shopping platform built with **React 18**, **Vite**, and **Material Design 3 "Expressive"** design system.
+A modern, premium live shopping platform built with Material Design 3 "Expressive" design system, featuring bold typography, large border radius, tonal color surfaces, and asymmetric layouts.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-orange)](https://github.com)
-[![React](https://img.shields.io/badge/react-18.3-blue)](https://react.dev)
-[![Vite](https://img.shields.io/badge/vite-5.4-purple)](https://vitejs.dev)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
+![React](https://img.shields.io/badge/react-18.3-blue)
+![Vite](https://img.shields.io/badge/vite-5.4-purple)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
-## ✨ Features
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Deployment](#deployment-to-github-pages)
+- [Project Structure](#project-structure)
+- [Design System](#design-system)
+- [Components](#components)
+- [Customization](#customization)
+- [Performance](#performance)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
 
 ### For Shoppers
-- 🔴 **AOIN Live** – Real-time shopping with interactive seller engagement
-- 🏪 **Themed Shops** – Curated shopping experiences
-- ⚡ **Daily Deals** – Limited-time exclusive offers
-- 🤖 **Smart Discovery** – AI-powered recommendations
-- 💳 **Secure Payments** – Safe transactions with easy returns
-- 📦 **Fast Shipping** – Quick delivery with order tracking
-- ❤️ **Wishlist** – Save and manage favorites
-- 🎧 **24/7 Support** – Always available customer service
+
+- **AOIN Live** – Real-time shopping with interactive seller engagement
+- **Themed Shops** – Curated shopping experiences tailored to your interests
+- **Innovation Window** – Limited-time daily deals and exclusive offers
+- **Smart Discovery** – AI-powered product recommendations
+- **Secure Payments** – Safe transactions with easy returns
+- **Fast Delivery** – Quick shipping with real-time order tracking
+- **Wishlist & Cart** – Save favorites and manage purchases seamlessly
+- **24/7 Support** – Always-available customer service
 
 ### For Merchants
-- 📊 **Analytics Dashboard** – Real-time insights and metrics
-- 🎥 **Live Streaming** – Engage customers in real-time
-- 💰 **Flexible Pricing** – Competitive fee structure
-- 📈 **Growth Tools** – Built-in marketing & promotions
+
+- **Seller Dashboard** – Comprehensive analytics and insights
+- **Live Streaming** – Engage customers in real-time
+- **Competitive Pricing** – Flexible fee structure
+- **Growth Tools** – Built-in marketing and promotion features
 
 ---
 
-## 🚀 Quick Start
+## Tech Stack
+
+- **React 18.3** – Modern UI library with hooks
+- **Vite 5.4** – Fast build tool and development server
+- **Tailwind CSS 3.4** – Utility-first CSS framework
+- **Lucide React** – Tree-shakeable icon library
+- **PostCSS** – CSS processing and optimization
+- **Material Design 3** – Google's latest design system
+
+---
+
+## Getting Started
 
 ### Prerequisites
-- Node.js 16+
-- npm or yarn
+
+- Node.js 16 or higher
+- npm or yarn package manager
+- Modern browser with ES6+ support
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/react-app.git
+git clone <your-repo-url>
 cd react-app
 
 # Install dependencies
@@ -49,116 +80,213 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:5173`
+The application will be available at `http://localhost:5173`
 
-### Build & Deploy
+### Build for Production
 
 ```bash
-# Build for production
+# Create optimized production build
 npm run build
 
-# Preview production build
+# Preview production build locally
 npm run preview
+```
 
-# Deploy to GitHub Pages
+The production-ready files will be output to the `dist/` directory.
+
+### Deploying to GitHub Pages
+
+This project is configured for easy deployment to GitHub Pages.
+
+#### Prerequisites
+
+- Your project must be in a GitHub repository
+- You have admin access to the repository settings
+
+#### Automatic Deployment (Recommended)
+
+The project includes a GitHub Actions workflow that automatically builds and deploys your site when you push to the `main` or `master` branch.
+
+**Setup Instructions:**
+
+1. Push your project to GitHub:
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. Go to your repository settings on GitHub
+3. Navigate to **Settings → Pages**
+4. Under "Build and deployment":
+   - Set **Source** to "GitHub Actions"
+   - The workflow will run automatically on your next push
+
+5. Once the workflow completes, your site will be live at:
+   ```
+   https://YOUR_USERNAME.github.io/react-app/
+   ```
+
+#### Manual Deployment
+
+If you prefer to deploy manually:
+
+1. Install the `gh-pages` package (already in devDependencies):
+```bash
+npm install
+```
+
+2. Deploy your site:
+```bash
 npm run deploy
 ```
 
+This command builds your project and pushes the `dist` folder to the `gh-pages` branch.
+
+3. Enable GitHub Pages in your repository settings (same as step 2-5 above)
+
+#### Important Notes
+
+- The `base` path in `vite.config.js` is set to `/react-app/` to work correctly on GitHub Pages
+- If you're using a custom domain, update the `base` path accordingly
+- Changes pushed to `main` or `master` branch trigger automatic deployment via GitHub Actions
+- Deployments typically take 1-2 minutes to go live
+
+### Cache Clearing
+
+If styles appear incorrect after updates, clear the build cache:
+
+```bash
+rm -rf node_modules/.vite dist
+npm run dev
+```
+
+Then perform a hard refresh in your browser:
+- **Windows/Linux**: `Ctrl + Shift + R`
+- **macOS**: `Cmd + Shift + R`
+
 ---
 
-## 📦 What's Inside
-
-### Tech Stack
-- **React 18.3** – Modern UI library with hooks
-- **Vite 5.4** – Lightning-fast build tool
-- **Tailwind CSS 3.4** – Utility-first styling
-- **Lucide React** – Beautiful SVG icons
-- **Material Design 3** – Professional design system
-
-### Project Structure
+## Project Structure
 
 ```
 react-app/
 ├── public/
-│   └── logo.png
+│   └── logo.png              # Brand logo
 ├── src/
 │   ├── components/
 │   │   ├── ui/
-│   │   │   └── index.jsx          # Reusable UI components
-│   │   ├── Header.jsx
-│   │   ├── M3Hero.jsx
-│   │   ├── M3Features.jsx
-│   │   ├── CTA.jsx
-│   │   └── Footer.jsx
+│   │   │   └── index.jsx     # Reusable UI component library
+│   │   ├── Header.jsx        # Navigation with category chips
+│   │   ├── M3Hero.jsx        # Hero section with asymmetric layout
+│   │   ├── M3Features.jsx    # Feature cards and benefits
+│   │   ├── CTA.jsx           # Call-to-action section with FAB
+│   │   └── Footer.jsx        # Footer with newsletter signup
 │   ├── constants/
-│   │   └── index.js               # Shared data & constants
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css                  # Global styles
-├── .github/
-│   └── workflows/
-│       └── deploy.yml             # GitHub Actions CI/CD
-├── index.html
-├── package.json
-├── tailwind.config.js
-├── vite.config.js
-└── README.md
+│   │   └── index.js          # Shared data and constants
+│   ├── App.jsx               # Main application component
+│   ├── main.jsx              # React entry point
+│   └── index.css             # Global styles and M3 utilities
+├── index.html                # HTML template
+├── package.json              # Project dependencies
+├── tailwind.config.js        # Tailwind and M3 theme configuration
+├── vite.config.js            # Vite build configuration
+└── README.md                 # Project documentation
 ```
+
+### Key Files
+
+| File | Description |
+|------|-------------|
+| `src/components/ui/index.jsx` | Centralized UI component library (Button, Chip, Card, etc.) |
+| `src/constants/index.js` | Shared constants (categories, stats, navigation links) |
+| `src/index.css` | M3 utility classes and custom CSS styles |
+| `tailwind.config.js` | M3 color system and design tokens |
 
 ---
 
-## 🎨 Design System
+## Design System
 
-### Material Design 3 "Expressive"
+This project implements **Material Design 3 "Expressive"** with the following principles:
 
-This project uses **Material Design 3** with:
-
-- **Large Border Radius** – 32px rounded corners for a soft, modern look
-- **Tonal Color Surfaces** – Warm creams and pastels, no harsh whites
-- **Asymmetric Layouts** – Dynamic "bento box" grid compositions
-- **Expressive Typography** – Bold headlines mixing serif and sans-serif
-- **Glassmorphism** – Subtle backdrop blur and transparency effects
-- **Color Harmony** – Primary orange, secondary sage, tertiary lavender
+- **Large Border Radius** – 32px rounded corners for a soft, modern aesthetic
+- **Tonal Color Surfaces** – Warm cream and orange tones instead of pure white
+- **Asymmetric Layouts** – Dynamic "bento box" grid arrangements
+- **Expressive Typography** – Mixing serif italics with sans-serif fonts
+- **Glassmorphism Effects** – Backdrop blur and transparency layers
+- **Color Harmony** – Cohesive primary (orange), secondary (sage), tertiary (lavender) palette
 
 ### Color Palette
 
+#### Primary (Orange)
+
 ```css
-/* Primary (Orange) */
-primary-50:   #FFF8F4   /* Background */
-primary-200:  #FFDCC1   /* Light containers */
-primary-500:  #ea580c   /* Brand color */
-primary-900:  #482818   /* Dark surfaces */
+primary-50:  #FFF8F4  /* Page background */
+primary-200: #FFDCC1  /* Light containers */
+primary-400: #FFB787  /* Interactive elements */
+primary-500: #ea580c  /* Brand color */
+primary-900: #482818  /* Dark surfaces */
+```
 
-/* Surface (Warm Neutrals) */
-surface-50:   #FFF8F4   /* Page background */
-surface-100:  #FFF3EB   /* Elevated surfaces */
-surface-900:  #52443D   /* Text */
+#### Surface (Warm Neutrals)
 
-/* Secondary (Sage Green) */
-secondary-100: #E7F3EE
-secondary-900: #0F3528
+```css
+surface-50:  #FFF8F4  /* Page background */
+surface-100: #FFF3EB  /* Elevated surfaces */
+surface-200: #FDEEE3  /* Containers */
+surface-900: #52443D  /* Primary text */
+```
 
-/* Tertiary (Lavender) */
-tertiary-100: #EBE9FC
-tertiary-900: #362F5C
+#### Secondary (Sage Green)
+
+```css
+secondary-100: #E7F3EE  /* Container background */
+secondary-900: #0F3528  /* Text on secondary */
+```
+
+#### Tertiary (Lavender)
+
+```css
+tertiary-100: #EBE9FC  /* Container background */
+tertiary-900: #362F5C  /* Text on tertiary */
 ```
 
 ### Border Radius Scale
 
 ```css
-rounded-m3:     28px    /* Standard */
-rounded-m3-lg:  32px    /* Cards (most common) */
-rounded-m3-xl:  36px    /* Large elements */
-rounded-full:   9999px  /* Pills & circles */
+rounded-m3:     28px    /* Standard elements */
+rounded-m3-lg:  32px    /* Cards and containers (most common) */
+rounded-m3-xl:  36px    /* Extra large elements */
+rounded-full:   9999px  /* Pills, chips, circular buttons */
+rounded-xl:     12px    /* Small interactive elements */
+rounded-2xl:    16px    /* Icon containers */
 ```
+
+### Design Guidelines
+
+**Use:**
+- `bg-surface-50` for page backgrounds (warm cream)
+- `rounded-m3-lg` (32px) for cards and containers
+- Tonal color surfaces (pastel backgrounds)
+- Asymmetric, dynamic layouts
+- Large typography (text-4xl to text-7xl for headlines)
+- Mixed serif italics with sans-serif for emphasis
+
+**Avoid:**
+- Pure `bg-white` (use `bg-surface-50` or tonal variants)
+- Pure `bg-black` (use `bg-surface-900`)
+- Small border radius like `rounded-md` (minimum `rounded-xl`)
+- Small typography for headlines
+- Symmetric grids without visual interest
+- Stark color contrasts
 
 ---
 
-## 🧩 Components
+## Components
 
-### Available UI Components
+### UI Component Library
 
-All reusable components are in `src/components/ui/index.jsx`:
+The project includes a comprehensive set of reusable components in `src/components/ui/index.jsx`:
 
 ```jsx
 import { 
@@ -166,52 +294,53 @@ import {
   Chip, 
   IconButton, 
   M3Card, 
-  FeatureCard,
-  SectionHeader,
-  BackgroundBlob
+  FeatureCard 
 } from './components/ui';
 
-// Examples
+// Usage examples
 <Button variant="filled" icon={ArrowRight}>Shop Now</Button>
-<Chip label="Fashion" active={true} />
-<M3Card title="Deals" variant="primary" />
-<FeatureCard icon={Zap} title="Fast" />
+<Chip label="Fashion" active={true} onClick={handleClick} />
+<IconButton icon={Search} filled badge={3} />
+<M3Card title="Daily Deals" subtitle="50% off" variant="primary" />
+<FeatureCard icon={Zap} title="Fast" description="Lightning speed" />
 ```
 
-### Shared Constants
+### Available Components
 
-Store data in `src/constants/index.js`:
+- **Button** – Unified button with filled, outlined, and tonal variants
+- **Chip** – Navigation and filter chips with active states
+- **IconButton** – Icon-only buttons with optional badge support
+- **M3Card** – Reusable card with primary, secondary, and tertiary color variants
+- **FeatureCard** – Feature display cards with icons
+- **BenefitChip** – Benefit and feature chips
+- **SectionHeader** – Consistent section headers across pages
+- **BackgroundBlob** – Decorative abstract background shapes
+- **StatCard** – Statistics display components
+- **FooterLink** – Footer navigation links
+- **Container / Section** – Layout wrapper components
+
+### Constants
+
+Shared data is centralized in `src/constants/index.js`:
 
 ```jsx
 import { CATEGORIES, STATS, FOOTER_LINKS } from '../constants';
 ```
 
----
-
-## 🎯 Design Guidelines
-
-### ✅ DO
-
-- Use `bg-surface-50` for backgrounds (warm cream, not white)
-- Use `rounded-m3-lg` (32px) for cards and containers
-- Create asymmetric, dynamic layouts
-- Use large, bold typography for headlines
-- Mix serif italics with sans-serif for emphasis
-- Add emotional, expressive visual elements
-
-### ❌ DON'T
-
-- Don't use pure `bg-white` (use tonal variants)
-- Don't use small border radius like `rounded-md`
-- Don't create symmetric grids (add visual interest)
-- Don't use stark color contrasts (keep it warm)
-- Don't use tiny typography for headlines
+**Available Constants:**
+- `CATEGORIES` – Navigation category data
+- `STATS` – Company statistics and metrics
+- `FOOTER_LINKS` – Footer navigation structure
+- `SOCIAL_LINKS` – Social media links
+- `LEGAL_LINKS` – Privacy policy, terms of service links
+- `M3_VARIANTS` – Color variant mappings
+- `ICON_SIZES` – Standardized icon size tokens
 
 ---
 
-## 🔧 Customization
+## Customization
 
-### Change Brand Color
+### Changing the Brand Color
 
 Edit `tailwind.config.js`:
 
@@ -221,7 +350,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          500: "#YOUR_COLOR",
+          500: "#YOUR_COLOR", // Update this value
         }
       }
     }
@@ -229,175 +358,163 @@ module.exports = {
 }
 ```
 
-Then restart the dev server.
+Restart the development server after making changes.
 
-### Update Logo
+### Updating the Logo
 
-Replace `public/logo.png` (recommended: 200x200px PNG with transparency).
+Replace `public/logo.png` with your logo. Recommended specifications:
+- Format: PNG with transparency
+- Size: 200x200px
+- Optimized for web
 
-### Modify Content
+### Modifying Content
 
-- **Component text**: `src/components/`
-- **Data (categories, stats)**: `src/constants/index.js`
-- **Styles & theme**: `tailwind.config.js` and `src/index.css`
+- Component text and structure: `src/components/`
+- Shared data (categories, stats): `src/constants/index.js`
+- Styling and theme: `tailwind.config.js` and `src/index.css`
 
-### Add New Pages
+### Adding New Pages
 
 ```jsx
-// 1. Create component
+// 1. Create new component file
 const NewPage = () => {
-  return <div>Your content</div>;
+  return <div>New Page Content</div>;
 };
+export default NewPage;
 
 // 2. Import in App.jsx
 import NewPage from './components/NewPage';
 
-// 3. Add to routing (if using React Router)
+// 3. Integrate into routing system (if using React Router)
 ```
 
 ---
 
-## 📤 Deployment
+## Performance
 
-### GitHub Pages (Automatic)
+### Bundle Size (Production Build)
 
-This project is pre-configured for GitHub Pages with automatic CI/CD.
-
-**Setup:**
-
-1. Push your code to GitHub:
-   ```bash
-   git push origin main
-   ```
-
-2. Go to repository **Settings → Pages**
-
-3. Set **Source** to **GitHub Actions**
-
-4. Your site deploys automatically on every push!
-
-**Your site URL**: `https://YOUR_USERNAME.github.io/react-app/`
-
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
-
-### Manual Deployment
-
-```bash
-npm run deploy
-```
-
-This builds your project and pushes to the `gh-pages` branch.
-
----
-
-## 🐛 Troubleshooting
-
-### Site shows 404 errors
-
-- Verify `base` path in `vite.config.js` matches your repository name
-- Check that your repository is public
-- Hard refresh your browser: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (macOS)
-
-### Styles not loading
-
-- Verify `base` path in `vite.config.js`
-- Clear browser cache
-- Hard refresh your browser
-- Check the Actions tab for build errors
-
-### Build fails
-
-- Check the **Actions** tab for detailed error logs
-- Ensure all dependencies are installed: `npm install`
-- Try building locally: `npm run build`
-
-### Changes not showing
-
-- Wait 1-2 minutes for GitHub Actions to complete
-- Check the **Actions** tab to confirm deployment succeeded
-- Hard refresh your browser and clear cache
-
----
-
-## 📊 Performance
-
-### Bundle Size (Production)
 - **HTML**: ~0.86 KB
 - **CSS**: ~28.64 KB
 - **JavaScript**: ~168 KB (~52 KB gzipped)
 - **Total**: ~197 KB (~81 KB gzipped)
 
 ### Optimizations
-- ✅ Reusable component architecture
-- ✅ Shared constants reduce duplication
-- ✅ Tree-shaking enabled in Vite
-- ✅ CSS purging in production
-- ✅ Icon tree-shaking with lucide-react
-- ✅ Ready for code-splitting with React.lazy
 
-### Lighthouse Targets
-- Performance: 90+
-- Accessibility: 95+
-- Best Practices: 95+
-- SEO: 100
+- Component library architecture eliminates code duplication
+- Shared constants reduce data redundancy
+- Tree-shaking enabled via Vite
+- CSS purging in production builds
+- Ready for code-splitting with React.lazy
+- Icon tree-shaking via lucide-react
+
+### Performance Targets
+
+- **Performance**: 90+
+- **Accessibility**: 95+
+- **Best Practices**: 95+
+- **SEO**: 100
 
 ---
 
-## 🤝 Contributing
+## Troubleshooting
 
-Contributions are welcome!
+### White Background Instead of Warm Cream
+
+Clear all build caches and restart:
+
+```bash
+rm -rf node_modules/.vite dist
+npm run dev
+```
+
+Then perform a hard refresh in your browser.
+
+### Sharp Corners Instead of Rounded
+
+This is typically caused by browser caching. Perform a hard refresh:
+- **Windows/Linux**: `Ctrl + Shift + R`
+- **macOS**: `Cmd + Shift + R`
+
+### Incorrect Colors
+
+1. Verify `tailwind.config.js` contains the correct M3 color definitions
+2. Check browser DevTools for CSS conflicts
+3. Clear build cache: `rm -rf node_modules/.vite dist`
+4. Restart the development server
+
+### Component Import Errors
+
+Ensure all dependencies are installed:
+
+```bash
+npm install
+```
+
+Verify import paths match the file structure. Import from `'./components/ui'` not `'./ui'`.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please follow these guidelines:
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Follow the Material Design 3 guidelines above
-4. Commit your changes: `git commit -m 'Add feature'`
-5. Push to the branch: `git push origin feature/your-feature`
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Follow the Material Design 3 principles outlined above
+4. Commit your changes: `git commit -m 'Add amazing feature'`
+5. Push to the branch: `git push origin feature/amazing-feature`
 6. Open a Pull Request
 
 ### Code Style
+
 - Use functional components with React hooks
-- Follow M3 design principles (32px radius, tonal colors)
+- Follow M3 design guidelines (32px border radius, tonal colors)
 - Extract reusable components to `src/components/ui/`
 - Store static data in `src/constants/`
 - Include accessibility attributes (aria-label, role, etc.)
+- Write clear, descriptive commit messages
 
 ---
 
-## 📚 Resources
+## Resources
 
 ### Material Design 3
+
 - [M3 Design Guidelines](https://m3.material.io/)
 - [M3 Color System](https://m3.material.io/styles/color/overview)
 - [M3 Components](https://m3.material.io/components)
 
-### Documentation
-- [React Docs](https://react.dev/)
-- [Vite Docs](https://vitejs.dev/)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Lucide Icons](https://lucide.dev/)
+### React & Build Tools
 
-### Deployment
-- [GitHub Pages Docs](https://docs.github.com/en/pages)
-- [GitHub Actions Docs](https://docs.github.com/en/actions)
-- [DEPLOYMENT.md](./DEPLOYMENT.md) – Detailed deployment guide
-- [DEPLOY_CHECKLIST.md](./DEPLOY_CHECKLIST.md) – Quick reference
+- [React Documentation](https://react.dev/)
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
 ---
 
-## 📄 License
+## License
 
-MIT License – Free to use for personal or commercial projects.
-
----
-
-## 💬 Support
-
-Need help?
-
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/react-app/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/react-app/discussions)
-- **Documentation**: See [DEPLOYMENT.md](./DEPLOYMENT.md) and [DEPLOY_CHECKLIST.md](./DEPLOY_CHECKLIST.md)
+MIT License – This project is free to use for personal or commercial purposes.
 
 ---
 
-**Built with ❤️ using React, Vite, and Material Design 3**
+## Support
+
+For questions, issues, or feature requests:
+
+- **Issues**: [GitHub Issues](your-repo-url/issues)
+- **Discussions**: [GitHub Discussions](your-repo-url/discussions)
+- **Documentation**: Refer to this README
+
+### Deployment Help
+
+For comprehensive deployment instructions:
+- See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed GitHub Pages setup
+- Use [DEPLOY_CHECKLIST.md](./DEPLOY_CHECKLIST.md) for a quick reference
+- Check [PRODUCTION_CHECKLIST.md](./PRODUCTION_CHECKLIST.md) for pre-deployment verification
+- Review [CLEANUP_SUMMARY.md](./CLEANUP_SUMMARY.md) for codebase optimization details
+
+---
+
+**Built with Material Design 3 "Expressive"**

@@ -1,10 +1,8 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        // M3 Expressive Primary (Orange)
         primary: {
           50: "#FFF8F4",
           100: "#FFEEE0",
@@ -17,7 +15,6 @@ export default {
           800: "#A03104",
           900: "#482818",
         },
-        // M3 Surface Tones (Warm)
         surface: {
           50: "#FFF8F4",
           100: "#FFF3EB",
@@ -30,7 +27,6 @@ export default {
           800: "#A89178",
           900: "#52443D",
         },
-        // M3 Secondary Container (Green/Sage)
         secondary: {
           50: "#F0F8F4",
           100: "#E7F3EE",
@@ -43,7 +39,6 @@ export default {
           800: "#356858",
           900: "#0F3528",
         },
-        // M3 Tertiary Container (Purple)
         tertiary: {
           50: "#F5F4FC",
           100: "#EBE9FC",

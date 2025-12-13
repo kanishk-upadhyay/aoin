@@ -1,7 +1,5 @@
-/* Navigation categories */
 export const CATEGORIES = ["All", "Fashion", "Tech", "Home", "Beauty"];
 
-/* Company stats */
 export const STATS = [
   {
     value: "10K+",
@@ -17,7 +15,6 @@ export const STATS = [
   },
 ];
 
-/* Footer links */
 export const FOOTER_LINKS = {
   shop: [
     { name: "AOIN Live", href: "#live" },
@@ -49,7 +46,6 @@ export const FOOTER_LINKS = {
   ],
 };
 
-/* Social links */
 export const SOCIAL_LINKS = [
   { name: "Facebook", href: "#facebook" },
   { name: "Twitter", href: "#twitter" },
@@ -57,14 +53,12 @@ export const SOCIAL_LINKS = [
   { name: "Youtube", href: "#youtube" },
 ];
 
-/* Legal links */
 export const LEGAL_LINKS = [
   { name: "Privacy Policy", href: "#privacy" },
   { name: "Terms of Service", href: "#terms" },
   { name: "Cookie Policy", href: "#cookies" },
 ];
 
-/* Color variants */
 export const M3_VARIANTS = {
   primary: "bg-primary-200 text-primary-900",
   secondary: "bg-secondary-100 text-secondary-900",
@@ -72,7 +66,6 @@ export const M3_VARIANTS = {
   surface: "bg-surface-200 text-surface-900",
 };
 
-/* Icon sizes */
 export const ICON_SIZES = {
   sm: 20,
   md: 24,

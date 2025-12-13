@@ -48,14 +48,11 @@ const BENEFITS = [
 const Features = () => {
   return (
     <section className="container-custom py-16 md:py-24">
-      {/* Section header */}
       <SectionHeader
         eyebrow="For Shoppers"
         title="Shop smarter with live product demonstrations"
         description="Experience themed shops and exclusive daily deals that bring shopping to life."
       />
-
-      {/* Features grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
         {SHOPPER_FEATURES.map((feature) => (
           <FeatureCard
@@ -67,8 +64,6 @@ const Features = () => {
           />
         ))}
       </div>
-
-      {/* Benefits section */}
       <div className="bg-surface-100 rounded-m3-lg p-8 md:p-12">
         <h3 className="text-3xl md:text-4xl font-normal mb-8 text-center">
           Why Shop on AOIN

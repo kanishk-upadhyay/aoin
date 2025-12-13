@@ -13,7 +13,6 @@ const SOCIAL_ICONS_MAP = {
 const Footer = () => {
   return (
     <footer className="bg-surface-900 text-surface-100">
-      {/* Newsletter section */}
       <div className="border-b border-surface-700">
         <div className="container-custom py-16">
           <div className="max-w-2xl">
@@ -41,11 +40,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer content */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
-          {/* Brand section */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <a href="/" className="mb-4 inline-block">
               <img
@@ -74,8 +70,6 @@ const Footer = () => {
               })}
             </div>
           </div>
-
-          {/* Shop links */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-surface-50">Shop</h4>
             <ul className="space-y-3">
@@ -86,8 +80,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Merchant links */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-surface-50">Sell</h4>
             <ul className="space-y-3">
@@ -98,8 +90,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Support links */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-surface-50">Support</h4>
             <ul className="space-y-3">
@@ -110,8 +100,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Company links */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-surface-50">Company</h4>
             <ul className="space-y-3">
@@ -124,13 +112,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer bottom */}
       <div className="border-t border-surface-700">
         <div className="container-custom py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-surface-400 text-sm">
-              © AOIN. All rights reserved.
+              © 2024 AOIN. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
               {LEGAL_LINKS.map((link) => (

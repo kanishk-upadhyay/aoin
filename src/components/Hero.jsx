@@ -26,7 +26,6 @@ const Card = ({
         <ArrowRight size={20} />
       </button>
     </div>
-
     <div className="mt-8">
       <h3 className={`text-3xl font-normal leading-tight ${textColor}`}>
         {title}
@@ -38,10 +37,8 @@ const Card = ({
 
 const MainHeroCard = () => (
   <div className="col-span-1 md:col-span-2 bg-primary-900 rounded-m3-lg p-8 md:p-12 text-primary-100 relative overflow-hidden group min-h-[400px] md:min-h-[500px]">
-    {/* Abstract background shapes */}
     <div className="absolute top-0 right-0 w-64 h-64 bg-primary-400 rounded-full blur-[80px] opacity-20 translate-x-1/2 -translate-y-1/2" />
     <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-300 rounded-full blur-[60px] opacity-10 -translate-x-1/2 translate-y-1/2" />
-
     <div className="relative z-10 flex flex-col h-full justify-between">
       <div className="flex items-center gap-3">
         <span className="bg-primary-400 text-primary-900 px-3 py-1 rounded-lg text-xs font-black tracking-wide uppercase">
@@ -75,8 +72,6 @@ const MainHeroCard = () => (
         </button>
       </div>
     </div>
-
-    {/* Gradient overlay */}
     <div className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent z-0 pointer-events-none" />
   </div>
 );
@@ -85,15 +80,11 @@ const Hero = () => {
   return (
     <section className="container-custom py-6 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(300px,auto)]">
-        {/* Main hero card */}
         <MainHeroCard />
-
-        {/* Daily deals card */}
         <div className="row-span-1 md:row-span-2 bg-surface-200 rounded-m3-lg p-8 flex flex-col relative overflow-hidden min-h-[400px]">
           <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-primary-600 shadow-m3 z-10">
             ENDING SOON
           </div>
-
           <div className="flex-1 flex flex-col justify-between">
             <div>
               <h3 className="text-4xl font-normal text-surface-900 mt-8">
@@ -119,8 +110,6 @@ const Hero = () => {
             strokeWidth={1.5}
           />
         </div>
-
-        {/* Feature cards */}
         <Card
           title="Themed Shops"
           subtitle="Curated for you"
@@ -139,8 +128,6 @@ const Hero = () => {
           className="min-h-[300px]"
         />
       </div>
-
-      {/* Stats section */}
       <div className="grid grid-cols-3 gap-8 mt-12 md:mt-16">
         {STATS.map((stat) => (
           <StatCard

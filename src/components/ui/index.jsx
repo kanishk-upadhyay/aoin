@@ -1,6 +1,5 @@
 import { memo } from "react";
 
-/* Button component */
 export const Button = ({
   children,
   variant = "filled",
@@ -24,7 +23,6 @@ export const Button = ({
   );
 };
 
-/* Chip component */
 export const Chip = memo(({ label, isActive, onClick, className = "" }) => (
   <button
     onClick={onClick}
@@ -34,7 +32,6 @@ export const Chip = memo(({ label, isActive, onClick, className = "" }) => (
   </button>
 ));
 
-/* Icon button component */
 export const IconButton = memo(
   ({
     icon: Icon,
@@ -59,7 +56,6 @@ export const IconButton = memo(
   ),
 );
 
-/* Card component */
 export const M3Card = ({
   title,
   subtitle,
@@ -102,7 +98,6 @@ export const M3Card = ({
   );
 };
 
-/* Feature card component */
 export const FeatureCard = memo(
   ({ icon: Icon, title, description, variant = "primary", className = "" }) => {
     const variants = {
@@ -128,7 +123,6 @@ export const FeatureCard = memo(
   },
 );
 
-/* Benefit chip component */
 export const BenefitChip = memo(({ icon: Icon, text, className = "" }) => (
   <div
     className={`flex items-center gap-3 p-4 bg-surface-100 rounded-2xl hover:bg-surface-200 transition-colors ${className}`}
@@ -140,7 +134,6 @@ export const BenefitChip = memo(({ icon: Icon, text, className = "" }) => (
   </div>
 ));
 
-/* Section header component */
 export const SectionHeader = memo(
   ({ eyebrow, title, description, className = "" }) => (
     <div className={`max-w-3xl mb-12 ${className}`}>
@@ -161,7 +154,6 @@ export const SectionHeader = memo(
   ),
 );
 
-/* Background blob component */
 export const BackgroundBlob = ({
   position = "top-right",
   size = "lg",
@@ -194,7 +186,6 @@ export const BackgroundBlob = ({
   );
 };
 
-/* Stats card component */
 export const StatCard = memo(({ value, label, className = "" }) => (
   <div className={`text-center ${className}`}>
     <div className="text-4xl md:text-5xl font-black text-primary-600 mb-2">
@@ -206,7 +197,6 @@ export const StatCard = memo(({ value, label, className = "" }) => (
   </div>
 ));
 
-/* Footer link component */
 export const FooterLink = memo(({ href, children, className = "" }) => (
   <a
     href={href}
@@ -216,12 +206,10 @@ export const FooterLink = memo(({ href, children, className = "" }) => (
   </a>
 ));
 
-/* Container component */
 export const Container = memo(({ children, className = "" }) => (
   <div className={`container-custom ${className}`}>{children}</div>
 ));
 
-/* Section component */
 export const Section = memo(({ children, className = "" }) => (
   <section className={`py-16 md:py-24 ${className}`}>{children}</section>
 ));

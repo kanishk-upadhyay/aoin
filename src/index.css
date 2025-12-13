@@ -1,9 +1,7 @@
-/* Tailwind CSS with PostCSS directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
 @layer base {
     body {
         @apply antialiased;
@@ -26,7 +24,6 @@
         letter-spacing: -0.025em;
     }
 
-    /* Typography */
     h1 {
         font-size: 3rem;
         line-height: 0.9;
@@ -55,9 +52,7 @@
     }
 }
 
-/* Component styles */
 @layer components {
-    /* Buttons */
     .btn-filled {
         @apply px-8 py-4 bg-primary-400 text-primary-900 rounded-full font-bold text-lg hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2;
     }
@@ -70,7 +65,6 @@
         @apply px-8 py-4 bg-primary-900 text-primary-50 rounded-full font-bold text-lg hover:bg-primary-800 transition-all active:scale-95 flex items-center justify-center gap-2;
     }
 
-    /* Cards */
     .m3-card {
         @apply p-8 rounded-m3-lg transition-all hover:scale-[1.01] cursor-pointer;
     }
@@ -91,7 +85,6 @@
         @apply bg-surface-100 text-surface-900;
     }
 
-    /* Chips */
     .chip {
         @apply px-6 py-2 rounded-xl font-bold text-sm transition-colors border;
     }
@@ -104,7 +97,6 @@
         @apply bg-transparent text-surface-600 border-surface-300 hover:bg-surface-100;
     }
 
-    /* Icon buttons */
     .icon-btn {
         @apply p-3 rounded-full transition-all active:scale-95;
     }
@@ -117,24 +109,20 @@
         @apply text-surface-700 hover:bg-primary-100;
     }
 
-    /* Floating action button */
     .fab {
         @apply h-16 w-16 bg-primary-300 hover:bg-primary-400 text-primary-900 rounded-[20px] shadow-m3-lg flex items-center justify-center transition-transform hover:scale-105 active:scale-90;
     }
 
-    /* Container */
     .container-custom {
         @apply max-w-7xl mx-auto px-4 md:px-6;
     }
 }
 
-/* Utilities */
 @layer utilities {
     .text-balance {
         text-wrap: balance;
     }
 
-    /* Elevation */
     .elevation-1 {
         @apply shadow-m3;
     }
@@ -148,13 +136,11 @@
     }
 }
 
-/* Selection */
 ::selection {
     background-color: #ffdcc1;
     color: #482818;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -172,12 +158,10 @@
     background-color: #e8d3c0;
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Number input spinners */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -189,7 +173,6 @@ input[type="number"] {
     appearance: textfield;
 }
 
-/* Focus indicator */
 *:focus-visible {
     outline: none;
     box-shadow:
@@ -197,7 +180,6 @@ input[type="number"] {
         0 0 0 4px #fff8f4;
 }
 
-/* Backdrop blur */
 @supports (backdrop-filter: blur(0)) {
     .backdrop-blur-m3 {
         backdrop-filter: blur(12px);
