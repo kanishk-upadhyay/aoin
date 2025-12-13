@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <a href="/" className="mb-4 inline-block">
               <img
-                src="/logo.png"
+                src="logo.png"
                 alt="AOIN"
                 className="h-10 w-auto brightness-0 invert"
               />
