@@ -1,0 +1,205 @@
+/* Tailwind CSS with PostCSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+    body {
+        @apply antialiased;
+        background-color: #fff8f4;
+        color: #52443d;
+        font-family:
+            "Inter",
+            system-ui,
+            -apple-system,
+            sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 400;
+        letter-spacing: -0.025em;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 3rem;
+        line-height: 0.9;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        line-height: 1.25;
+    }
+
+    h3 {
+        font-size: 1.875rem;
+        line-height: 1.25;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 4.5rem;
+        }
+        h2 {
+            font-size: 3.75rem;
+        }
+        h3 {
+            font-size: 3rem;
+        }
+    }
+}
+
+/* Component styles */
+@layer components {
+    /* Buttons */
+    .btn-filled {
+        @apply px-8 py-4 bg-primary-400 text-primary-900 rounded-full font-bold text-lg hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2;
+    }
+
+    .btn-outlined {
+        @apply px-8 py-4 border-2 border-surface-300 text-surface-900 rounded-full font-bold text-lg hover:bg-surface-100 transition-all active:scale-95 flex items-center justify-center gap-2;
+    }
+
+    .btn-tonal {
+        @apply px-8 py-4 bg-primary-900 text-primary-50 rounded-full font-bold text-lg hover:bg-primary-800 transition-all active:scale-95 flex items-center justify-center gap-2;
+    }
+
+    /* Cards */
+    .m3-card {
+        @apply p-8 rounded-m3-lg transition-all hover:scale-[1.01] cursor-pointer;
+    }
+
+    .m3-card-primary {
+        @apply bg-primary-200 text-primary-900;
+    }
+
+    .m3-card-secondary {
+        @apply bg-secondary-100 text-secondary-900;
+    }
+
+    .m3-card-tertiary {
+        @apply bg-tertiary-100 text-tertiary-900;
+    }
+
+    .m3-card-surface {
+        @apply bg-surface-100 text-surface-900;
+    }
+
+    /* Chips */
+    .chip {
+        @apply px-6 py-2 rounded-xl font-bold text-sm transition-colors border;
+    }
+
+    .chip-selected {
+        @apply bg-primary-200 text-primary-900 border-transparent;
+    }
+
+    .chip-unselected {
+        @apply bg-transparent text-surface-600 border-surface-300 hover:bg-surface-100;
+    }
+
+    /* Icon buttons */
+    .icon-btn {
+        @apply p-3 rounded-full transition-all active:scale-95;
+    }
+
+    .icon-btn-filled {
+        @apply bg-primary-900 text-primary-50 hover:bg-primary-800;
+    }
+
+    .icon-btn-standard {
+        @apply text-surface-700 hover:bg-primary-100;
+    }
+
+    /* Floating action button */
+    .fab {
+        @apply h-16 w-16 bg-primary-300 hover:bg-primary-400 text-primary-900 rounded-[20px] shadow-m3-lg flex items-center justify-center transition-transform hover:scale-105 active:scale-90;
+    }
+
+    /* Container */
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 md:px-6;
+    }
+}
+
+/* Utilities */
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    /* Elevation */
+    .elevation-1 {
+        @apply shadow-m3;
+    }
+
+    .elevation-2 {
+        @apply shadow-m3-md;
+    }
+
+    .elevation-3 {
+        @apply shadow-m3-lg;
+    }
+}
+
+/* Selection */
+::selection {
+    background-color: #ffdcc1;
+    color: #482818;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff3eb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f5dcc9;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e8d3c0;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Focus indicator */
+*:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 2px #ea580c,
+        0 0 0 4px #fff8f4;
+}
+
+/* Backdrop blur */
+@supports (backdrop-filter: blur(0)) {
+    .backdrop-blur-m3 {
+        backdrop-filter: blur(12px);
+    }
+}
