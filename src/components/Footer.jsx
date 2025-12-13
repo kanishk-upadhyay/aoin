@@ -130,7 +130,7 @@ const Footer = () => {
         <div className="container-custom py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-surface-400 text-sm">
-              © 2024 AOIN. All rights reserved.
+              © AOIN. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
               {LEGAL_LINKS.map((link) => (
