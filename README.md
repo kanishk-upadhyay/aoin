@@ -1,283 +1,215 @@
 # AOIN – Live Commerce Marketplace
 
-A modern, premium live shopping platform built with **Material Design 3 "Expressive"** – featuring bold, emotional design with large border radius, tonal color surfaces, and asymmetric layouts.
+A modern live shopping platform built with **React 18**, **Vite**, and **Material Design 3 "Expressive"** design system.
 
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
-![React](https://img.shields.io/badge/react-18.3-blue)
-![Vite](https://img.shields.io/badge/vite-5.4-purple)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Version](https://img.shields.io/badge/version-1.0.0-orange)](https://github.com)
+[![React](https://img.shields.io/badge/react-18.3-blue)](https://react.dev)
+[![Vite](https://img.shields.io/badge/vite-5.4-purple)](https://vitejs.dev)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
 
-## 🎨 Material Design 3 "Expressive"
+## ✨ Features
 
-This project implements **M3 Expressive** design system with:
+### For Shoppers
+- 🔴 **AOIN Live** – Real-time shopping with interactive seller engagement
+- 🏪 **Themed Shops** – Curated shopping experiences
+- ⚡ **Daily Deals** – Limited-time exclusive offers
+- 🤖 **Smart Discovery** – AI-powered recommendations
+- 💳 **Secure Payments** – Safe transactions with easy returns
+- 📦 **Fast Shipping** – Quick delivery with order tracking
+- ❤️ **Wishlist** – Save and manage favorites
+- 🎧 **24/7 Support** – Always available customer service
 
-- ✨ **Large Border Radius** (32px) - No sharp corners!
-- 🎨 **Tonal Color Surfaces** - Warm creams and oranges, not pure white
-- 📐 **Asymmetric "Bento Box" Layouts** - Dynamic, engaging grids
-- 🔤 **Expressive Typography** - Mixing serif italics with sans-serif
-- 🎯 **Floating Action Button (FAB)** - Prominent orange cart button
-- 💎 **Glassmorphism Effects** - Backdrop blur and transparency
-- 🌈 **Color Harmony** - Primary orange, secondary sage, tertiary lavender
+### For Merchants
+- 📊 **Analytics Dashboard** – Real-time insights and metrics
+- 🎥 **Live Streaming** – Engage customers in real-time
+- 💰 **Flexible Pricing** – Competitive fee structure
+- 📈 **Growth Tools** – Built-in marketing & promotions
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js 16+ and npm
-- Modern browser with ES6+ support
+- Node.js 16+
+- npm or yarn
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/YOUR_USERNAME/react-app.git
 cd react-app
 
 # Install dependencies
 npm install
 
-# Clear cache (IMPORTANT for first run!)
-rm -rf node_modules/.vite dist
-
 # Start development server
 npm run dev
 ```
 
-Visit **http://localhost:5173**
+Visit `http://localhost:5173`
 
-**Then HARD REFRESH your browser:**
-- Windows/Linux: `Ctrl + Shift + R`
-- Mac: `Cmd + Shift + R`
-
-### Build for Production
+### Build & Deploy
 
 ```bash
-# Create optimized production build
+# Build for production
 npm run build
 
-# Preview production build locally
+# Preview production build
 npm run preview
+
+# Deploy to GitHub Pages
+npm run deploy
 ```
 
-Output will be in the `dist/` folder, ready to deploy.
+---
+
+## 📦 What's Inside
+
+### Tech Stack
+- **React 18.3** – Modern UI library with hooks
+- **Vite 5.4** – Lightning-fast build tool
+- **Tailwind CSS 3.4** – Utility-first styling
+- **Lucide React** – Beautiful SVG icons
+- **Material Design 3** – Professional design system
+
+### Project Structure
+
+```
+react-app/
+├── public/
+│   └── logo.png
+├── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   │   └── index.jsx          # Reusable UI components
+│   │   ├── Header.jsx
+│   │   ├── M3Hero.jsx
+│   │   ├── M3Features.jsx
+│   │   ├── CTA.jsx
+│   │   └── Footer.jsx
+│   ├── constants/
+│   │   └── index.js               # Shared data & constants
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css                  # Global styles
+├── .github/
+│   └── workflows/
+│       └── deploy.yml             # GitHub Actions CI/CD
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+```
 
 ---
 
-## ✅ Design Verification Checklist
+## 🎨 Design System
 
-After starting the dev server, verify these M3 elements are displaying correctly:
+### Material Design 3 "Expressive"
 
-### Visual Elements
-- [ ] **Warm Background** - Page background is `#FFF8F4` (cream/warm), NOT white
-- [ ] **Large Rounded Corners** - All cards use 32px border radius
-- [ ] **Tonal Cards** - Soft orange, sage green, lavender containers
-- [ ] **Asymmetric Grid** - Hero section spans 2 columns, cards vary in height
-- [ ] **FAB Button** - Orange floating cart button in bottom-right corner
-- [ ] **Chip Navigation** - Rounded pill-shaped category buttons in header
-- [ ] **Serif Typography** - "Live Shopping" text uses italic serif font
+This project uses **Material Design 3** with:
 
-### Color Verification
-- [ ] Background: `#FFF8F4` (warm cream)
-- [ ] Primary Orange: `#ea580c`
-- [ ] Surface Cards: Pastel tones (not stark white)
-- [ ] CTA Section: Dark brown `#482818` with orange accents
-
-**If you see pure white backgrounds or sharp corners (4px), clear your cache and hard refresh!**
-
----
-
-## 🎨 M3 Design System
+- **Large Border Radius** – 32px rounded corners for a soft, modern look
+- **Tonal Color Surfaces** – Warm creams and pastels, no harsh whites
+- **Asymmetric Layouts** – Dynamic "bento box" grid compositions
+- **Expressive Typography** – Bold headlines mixing serif and sans-serif
+- **Glassmorphism** – Subtle backdrop blur and transparency effects
+- **Color Harmony** – Primary orange, secondary sage, tertiary lavender
 
 ### Color Palette
 
-#### Primary (Orange)
 ```css
-primary-50:  #FFF8F4  /* Lightest, page background */
-primary-200: #FFDCC1  /* Light containers */
-primary-400: #FFB787  /* Interactive elements */
-primary-500: #ea580c  /* Brand color */
-primary-900: #482818  /* Dark surfaces, CTA */
-```
+/* Primary (Orange) */
+primary-50:   #FFF8F4   /* Background */
+primary-200:  #FFDCC1   /* Light containers */
+primary-500:  #ea580c   /* Brand color */
+primary-900:  #482818   /* Dark surfaces */
 
-#### Surface (Warm Neutrals)
-```css
-surface-50:  #FFF8F4  /* Page background */
-surface-100: #FFF3EB  /* Elevated surfaces */
-surface-200: #FDEEE3  /* Containers */
-surface-900: #52443D  /* Text on light backgrounds */
-```
+/* Surface (Warm Neutrals) */
+surface-50:   #FFF8F4   /* Page background */
+surface-100:  #FFF3EB   /* Elevated surfaces */
+surface-900:  #52443D   /* Text */
 
-#### Secondary (Sage Green)
-```css
-secondary-100: #E7F3EE  /* Container background */
-secondary-900: #0F3528  /* Text on secondary */
-```
+/* Secondary (Sage Green) */
+secondary-100: #E7F3EE
+secondary-900: #0F3528
 
-#### Tertiary (Lavender)
-```css
-tertiary-100: #EBE9FC  /* Container background */
-tertiary-900: #362F5C  /* Text on tertiary */
+/* Tertiary (Lavender) */
+tertiary-100: #EBE9FC
+tertiary-900: #362F5C
 ```
 
 ### Border Radius Scale
 
 ```css
-rounded-m3:     28px  /* Standard */
-rounded-m3-lg:  32px  /* Most common, cards & containers */
-rounded-m3-xl:  36px  /* Extra large elements */
-rounded-full:   9999px /* Pills, chips, buttons */
-rounded-xl:     12px  /* Small interactive elements */
-rounded-2xl:    16px  /* Icon containers */
-```
-
-### Component Classes
-
-#### Buttons
-```jsx
-<button className="btn-filled">Primary Action</button>
-<button className="btn-outlined">Secondary Action</button>
-<button className="btn-tonal">Tertiary Action</button>
-```
-
-#### Cards
-```jsx
-<div className="m3-card m3-card-primary">Primary Card</div>
-<div className="m3-card m3-card-secondary">Secondary Card</div>
-<div className="m3-card m3-card-tertiary">Tertiary Card</div>
-```
-
-#### Chips (Navigation)
-```jsx
-<button className="chip chip-selected">Active</button>
-<button className="chip chip-unselected">Inactive</button>
-```
-
-#### Icon Buttons
-```jsx
-<button className="icon-btn icon-btn-filled">Filled</button>
-<button className="icon-btn icon-btn-standard">Standard</button>
-```
-
-#### FAB (Floating Action Button)
-```jsx
-<button className="fab">
-  <ShoppingCart />
-</button>
+rounded-m3:     28px    /* Standard */
+rounded-m3-lg:  32px    /* Cards (most common) */
+rounded-m3-xl:  36px    /* Large elements */
+rounded-full:   9999px  /* Pills & circles */
 ```
 
 ---
 
-## 📁 Project Structure
+## 🧩 Components
 
-```
-react-app/
-├── public/
-│   └── logo.png              # Brand logo
-├── src/
-│   ├── components/
-│   │   ├── ui/
-│   │   │   └── index.jsx     # Reusable UI components library
-│   │   ├── Header.jsx        # Navigation with chips
-│   │   ├── M3Hero.jsx        # Hero section with bento layout
-│   │   ├── M3Features.jsx    # Feature cards and benefits
-│   │   ├── CTA.jsx           # Call-to-action section + FAB
-│   │   └── Footer.jsx        # Footer with newsletter
-│   ├── constants/
-│   │   └── index.js          # Shared data & constants
-│   ├── App.jsx               # Main application component
-│   ├── main.jsx              # React entry point
-│   └── index.css             # Global styles & M3 utilities
-├── index.html                # HTML template
-├── package.json              # Dependencies
-├── tailwind.config.js        # Tailwind + M3 theme
-├── vite.config.js            # Vite configuration
-└── README.md                 # This file
-```
+### Available UI Components
 
-### Key Files
-
-- **`src/components/ui/index.jsx`** - Centralized UI component library (Button, Chip, Card, etc.)
-- **`src/constants/index.js`** - Shared constants (categories, stats, links)
-- **`src/index.css`** - M3 utility classes and custom CSS
-- **`tailwind.config.js`** - M3 color system and design tokens
-
----
-
-## 🧩 Reusable Components
-
-The project uses a **component-first architecture** to eliminate redundancy:
-
-### UI Components (`src/components/ui/index.jsx`)
+All reusable components are in `src/components/ui/index.jsx`:
 
 ```jsx
-import { Button, Chip, IconButton, M3Card, FeatureCard } from './components/ui';
+import { 
+  Button, 
+  Chip, 
+  IconButton, 
+  M3Card, 
+  FeatureCard,
+  SectionHeader,
+  BackgroundBlob
+} from './components/ui';
 
-// Usage examples:
+// Examples
 <Button variant="filled" icon={ArrowRight}>Shop Now</Button>
-<Chip label="Fashion" active={true} onClick={handleClick} />
-<IconButton icon={Search} filled badge={3} />
-<M3Card title="Daily Deals" subtitle="50% off" variant="primary" />
-<FeatureCard icon={Zap} title="Fast" description="Lightning speed" />
+<Chip label="Fashion" active={true} />
+<M3Card title="Deals" variant="primary" />
+<FeatureCard icon={Zap} title="Fast" />
 ```
 
-**Available Components:**
-- `Button` - Unified button with variants
-- `Chip` - Navigation/filter chips
-- `IconButton` - Icon-only buttons with badge support
-- `M3Card` - Reusable card with color variants
-- `FeatureCard` - Feature display cards
-- `BenefitChip` - Benefit/feature chips
-- `SectionHeader` - Consistent section headers
-- `BackgroundBlob` - Abstract background shapes
-- `StatCard` - Statistics display
-- `FooterLink` - Footer navigation links
-- `Container` / `Section` - Layout wrappers
+### Shared Constants
 
-### Constants (`src/constants/index.js`)
+Store data in `src/constants/index.js`:
 
 ```jsx
 import { CATEGORIES, STATS, FOOTER_LINKS } from '../constants';
-
-// No more hardcoded data duplication!
 ```
 
-**Available Constants:**
-- `CATEGORIES` - Navigation categories
-- `STATS` - Company statistics
-- `FOOTER_LINKS` - Footer navigation structure
-- `SOCIAL_LINKS` - Social media links
-- `LEGAL_LINKS` - Privacy, Terms, etc.
-- `M3_VARIANTS` - Color variant mappings
-- `ICON_SIZES` - Standardized icon sizes
-
 ---
 
-## 🎯 Design Principles
+## 🎯 Design Guidelines
 
 ### ✅ DO
-1. Use `bg-surface-50` for page backgrounds (warm cream)
-2. Use `rounded-m3-lg` (32px) for cards and containers
-3. Use tonal color surfaces (pastel backgrounds)
-4. Create asymmetric, dynamic layouts
-5. Use large typography (4xl-7xl for headlines)
-6. Mix serif italics with sans-serif for emphasis
-7. Add emotional, expressive elements
+
+- Use `bg-surface-50` for backgrounds (warm cream, not white)
+- Use `rounded-m3-lg` (32px) for cards and containers
+- Create asymmetric, dynamic layouts
+- Use large, bold typography for headlines
+- Mix serif italics with sans-serif for emphasis
+- Add emotional, expressive visual elements
 
 ### ❌ DON'T
-1. **NO** pure `bg-white` - Use `bg-surface-50` or tonal variants
-2. **NO** pure `bg-black` - Use `bg-surface-900`
-3. **NO** `rounded-md` (4px) - Minimum `rounded-xl` (12px)
-4. **NO** small text - Be bold with typography
-5. **NO** symmetric grids - Add visual interest with asymmetry
-6. **NO** stark contrasts - Use warm, tonal colors
+
+- Don't use pure `bg-white` (use tonal variants)
+- Don't use small border radius like `rounded-md`
+- Don't create symmetric grids (add visual interest)
+- Don't use stark color contrasts (keep it warm)
+- Don't use tiny typography for headlines
 
 ---
 
-## 🎨 Customization Guide
+## 🔧 Customization
 
 ### Change Brand Color
 
@@ -289,7 +221,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          500: "#YOUR_COLOR", // Change this
+          500: "#YOUR_COLOR",
         }
       }
     }
@@ -301,18 +233,20 @@ Then restart the dev server.
 
 ### Update Logo
 
-Replace `public/logo.png` with your logo (recommended size: 200x200px PNG with transparency).
+Replace `public/logo.png` (recommended: 200x200px PNG with transparency).
 
 ### Modify Content
 
-All component text is in `src/components/`. Data like categories and stats are in `src/constants/index.js`.
+- **Component text**: `src/components/`
+- **Data (categories, stats)**: `src/constants/index.js`
+- **Styles & theme**: `tailwind.config.js` and `src/index.css`
 
 ### Add New Pages
 
 ```jsx
 // 1. Create component
 const NewPage = () => {
-  return <div>New Page Content</div>;
+  return <div>Your content</div>;
 };
 
 // 2. Import in App.jsx
@@ -323,42 +257,65 @@ import NewPage from './components/NewPage';
 
 ---
 
-## 🔍 Troubleshooting
+## 📤 Deployment
 
-### Problem: Still seeing white background
+### GitHub Pages (Automatic)
 
-**Solution:**
+This project is pre-configured for GitHub Pages with automatic CI/CD.
+
+**Setup:**
+
+1. Push your code to GitHub:
+   ```bash
+   git push origin main
+   ```
+
+2. Go to repository **Settings → Pages**
+
+3. Set **Source** to **GitHub Actions**
+
+4. Your site deploys automatically on every push!
+
+**Your site URL**: `https://YOUR_USERNAME.github.io/react-app/`
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+
+### Manual Deployment
+
 ```bash
-# Clear ALL caches
-rm -rf node_modules/.vite dist
-npm run dev
-
-# Hard refresh browser (Ctrl+Shift+R or Cmd+Shift+R)
+npm run deploy
 ```
 
-### Problem: Sharp corners instead of rounded
+This builds your project and pushes to the `gh-pages` branch.
 
-**Cause:** Browser cache  
-**Solution:** Hard refresh with `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
+---
 
-### Problem: Colors look wrong
+## 🐛 Troubleshooting
 
-**Check:**
-1. Verify `tailwind.config.js` has correct M3 colors
-2. Check browser DevTools for CSS conflicts
-3. Clear build cache: `rm -rf node_modules/.vite dist`
-4. Restart dev server
+### Site shows 404 errors
 
-### Problem: Components not found
+- Verify `base` path in `vite.config.js` matches your repository name
+- Check that your repository is public
+- Hard refresh your browser: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (macOS)
 
-**Solution:**
-```bash
-# Ensure all dependencies are installed
-npm install
+### Styles not loading
 
-# Check import paths match file structure
-# Import from './components/ui' not './ui'
-```
+- Verify `base` path in `vite.config.js`
+- Clear browser cache
+- Hard refresh your browser
+- Check the Actions tab for build errors
+
+### Build fails
+
+- Check the **Actions** tab for detailed error logs
+- Ensure all dependencies are installed: `npm install`
+- Try building locally: `npm run build`
+
+### Changes not showing
+
+- Wait 1-2 minutes for GitHub Actions to complete
+- Check the **Actions** tab to confirm deployment succeeded
+- Hard refresh your browser and clear cache
 
 ---
 
@@ -367,117 +324,80 @@ npm install
 ### Bundle Size (Production)
 - **HTML**: ~0.86 KB
 - **CSS**: ~28.64 KB
-- **JS**: ~168 KB (52 KB gzipped)
+- **JavaScript**: ~168 KB (~52 KB gzipped)
 - **Total**: ~197 KB (~81 KB gzipped)
 
-### Optimizations Implemented
-- ✅ Component library eliminates code duplication
-- ✅ Shared constants reduce data redundancy
-- ✅ Tree-shaking enabled via Vite
-- ✅ CSS purged in production
-- ✅ Lazy loading ready (React.lazy support)
-- ✅ Icon tree-shaking via lucide-react
+### Optimizations
+- ✅ Reusable component architecture
+- ✅ Shared constants reduce duplication
+- ✅ Tree-shaking enabled in Vite
+- ✅ CSS purging in production
+- ✅ Icon tree-shaking with lucide-react
+- ✅ Ready for code-splitting with React.lazy
 
-### Lighthouse Score Target
-- **Performance**: 90+
-- **Accessibility**: 95+
-- **Best Practices**: 95+
-- **SEO**: 100
-
----
-
-## 🛠️ Tech Stack
-
-- **React 18.3** - UI library
-- **Vite 5.4** - Build tool & dev server
-- **Tailwind CSS 3.4** - Utility-first CSS framework
-- **Lucide React** - Icon library (tree-shakeable)
-- **PostCSS** - CSS processing
-- **M3 Design System** - Google's Material Design 3
+### Lighthouse Targets
+- Performance: 90+
+- Accessibility: 95+
+- Best Practices: 95+
+- SEO: 100
 
 ---
 
-## 🎓 Learning Resources
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Follow the Material Design 3 guidelines above
+4. Commit your changes: `git commit -m 'Add feature'`
+5. Push to the branch: `git push origin feature/your-feature`
+6. Open a Pull Request
+
+### Code Style
+- Use functional components with React hooks
+- Follow M3 design principles (32px radius, tonal colors)
+- Extract reusable components to `src/components/ui/`
+- Store static data in `src/constants/`
+- Include accessibility attributes (aria-label, role, etc.)
+
+---
+
+## 📚 Resources
 
 ### Material Design 3
 - [M3 Design Guidelines](https://m3.material.io/)
 - [M3 Color System](https://m3.material.io/styles/color/overview)
 - [M3 Components](https://m3.material.io/components)
 
-### React & Vite
-- [React Documentation](https://react.dev/)
-- [Vite Guide](https://vitejs.dev/guide/)
+### Documentation
+- [React Docs](https://react.dev/)
+- [Vite Docs](https://vitejs.dev/)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [Lucide Icons](https://lucide.dev/)
 
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Follow the M3 design principles (see above)
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-**Code Style:**
-- Use functional components with hooks
-- Follow M3 design rules (32px radius, tonal colors)
-- Extract reusable components to `src/components/ui/`
-- Store static data in `src/constants/`
-- Add accessibility attributes (aria-label, etc.)
+### Deployment
+- [GitHub Pages Docs](https://docs.github.com/en/pages)
+- [GitHub Actions Docs](https://docs.github.com/en/actions)
+- [DEPLOYMENT.md](./DEPLOYMENT.md) – Detailed deployment guide
+- [DEPLOY_CHECKLIST.md](./DEPLOY_CHECKLIST.md) – Quick reference
 
 ---
 
 ## 📄 License
 
-MIT License - feel free to use this project for personal or commercial purposes.
+MIT License – Free to use for personal or commercial projects.
 
 ---
 
-## 🎯 Features
+## 💬 Support
 
-### For Shoppers
-- 🔴 **AOIN Live** - Real-time shopping with seller interaction
-- 🏪 **Themed Shops** - Curated shopping experiences
-- ⚡ **Innovation Window** - Limited-time daily deals
-- 📈 **Smart Discovery** - AI-powered product recommendations
-- 🛡️ **Secure Payments** - Safe transactions with easy returns
-- 📦 **Fast Delivery** - Quick shipping with order tracking
-- ❤️ **Wishlist & Cart** - Save favorites and manage purchases
-- 🎧 **24/7 Support** - Always-available customer service
+Need help?
 
-### For Merchants
-- 📊 **Seller Dashboard** - Comprehensive analytics
-- 🎥 **Live Streaming** - Engage customers in real-time
-- 💰 **Competitive Pricing** - Flexible fee structure
-- 📈 **Growth Tools** - Marketing and promotion features
+- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/react-app/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/react-app/discussions)
+- **Documentation**: See [DEPLOYMENT.md](./DEPLOYMENT.md) and [DEPLOY_CHECKLIST.md](./DEPLOY_CHECKLIST.md)
 
 ---
 
-## 💡 Pro Tips
-
-1. **Always use M3 components** from `src/components/ui/` instead of creating duplicates
-2. **Store data in constants** - Never hardcode repeated data
-3. **Use Tailwind utilities** - Avoid custom CSS when possible
-4. **Follow the color system** - Stick to primary/secondary/tertiary/surface palette
-5. **Test responsiveness** - Check mobile (375px), tablet (768px), desktop (1440px)
-6. **Optimize images** - Use WebP format when possible
-7. **Add accessibility** - Include aria-labels and keyboard navigation
-8. **Keep it expressive** - M3 is about emotion and personality!
-
----
-
-## 📞 Support
-
-Need help? Check these resources:
-
-1. **Issues** - [GitHub Issues](your-repo-url/issues)
-2. **Discussions** - [GitHub Discussions](your-repo-url/discussions)
-3. **Documentation** - This README!
-
----
-
-**Built with ❤️ using Material Design 3 "Expressive"**
-
-*Remember: If you change the border radius back to 4px, you're fired.* 😉
+**Built with ❤️ using React, Vite, and Material Design 3**
